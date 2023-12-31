@@ -62,6 +62,7 @@ We will also be visulaizing the contours of the fitted Gaussian distribution and
 ![Image 12-30-23 at 6 40 PM](https://github.com/ntalib/Anomaly-Detection-Movie-Recommendations-System/assets/90749418/7d8b5894-25d1-4b48-ac9b-e03376ea01a0)
 
 
+From the plot visuals, we can see that most of non-anomalous examples are in the region with the highest probility, while the anomalous training examples are in the region with lower probabilities. 
 
 
 ## Project Schema 2: Selecting the threshold, ε
@@ -70,7 +71,12 @@ We will also be visulaizing the contours of the fitted Gaussian distribution and
 After estimating or Gaussian distribution parameters, we can now investigate which training examples have a very high probability given this distribution and which training example has a low probability. 
 
 
-The low probability training examples are more likely to be the anomalies
+The low probability training examples are more likely to be the anomalies in our traning examples, and a way to determine which examples are anomalies is to select athreshole based on a cross validation set. 
+
+
+In this part of the project we will implement as algorithm to select the threshold ε using F<sub>1</sub> score on the cross validation set. For this we use a cross validation trainging set 
+
+{(*x*<sub>cv</sub><sup>(1)</sup>,*y*<sub>cv</sub><sup>(1)</sup>),...,(*x*<sub>cv</sub><sup>(m)</sup>,*y*<sub>cv</sub><sup>(m)</sup>), where the label y=1 corresponds to an anomalous training example and y=0  corresponds to a normal training example. For each cross validation training example, we will compute p(x<sub>cv</sub><sup>(i)</sup>). The vector of all these probabilities
 
 
 
