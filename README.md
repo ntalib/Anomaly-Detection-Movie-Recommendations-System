@@ -5,7 +5,7 @@
 
 This is a Anamoly Detection and Recommender system using MATLAB. 
 
-The anamoly detection project uses the Multivariate Gaussian Distribution to fit the training data. We 307 collected data, m=307, when the detection algorithm detected anomalous behavior in the computer servers, thus the unlabeled dataset { x^1, ..., x^m}. The features measure the throughput (mb/s) and latency (ms) of response of each server and we suspect that the vast majority of these examples are "normal" or non-anomalous examples of the servers operating normally but there is a possibility that some of the examples from the servers is acting anomalously from the collected data. 
+The anamoly detection project uses the Multivariate Gaussian Distribution to fit the training data. We  collected data, m=307, when the detection algorithm detected anomalous behavior in the computer servers, thus the unlabeled dataset { x^1, ..., x^m}. The features measure the throughput (mb/s) and latency (ms) of response of each server and we suspect that the vast majority of these examples are "normal" or non-anomalous examples of the servers operating normally but there is a possibility that some of the examples from the servers is acting anomalously from the collected data. 
 
 
 
@@ -39,7 +39,7 @@ Where miu is the mean and the sigma squared controlss the variance.
 
 
 
-## Project Schema: Estimating the parameters for a Gaussian distribution
+## Project Schema 1: Estimating the parameters for a Gaussian distribution
 
 
 To estimate the parameters (miu, sigma squared) of the ith feature by using the following equations. 
@@ -55,7 +55,30 @@ and for the variance, sigma, we will use:
 ![Image 12-30-23 at 6 18 PM](https://github.com/ntalib/Anomaly-Detection-Movie-Recommendations-System/assets/90749418/ef659cc9-19c9-4bea-aa0e-25ac9aeeb966)
 
 
-The file *estimateGaussian.m* is a function that takes data matrix X as input and output an n-dimension vector *mu* that hols the mean of all the *n* features and another n-dimension vector
+The file *estimateGaussian.m* is a function that takes data matrix X as input and output an n-dimension vector *mu* that hols the mean of all the *n* features and another n-dimension vector mu that holds the mean of all the n features and another n-dimension vector sigma2 that holds the variances of all the features. 
+
+We will also be visulaizing the contours of the fitted Gaussian distribution and we should have a plot similar to below: 
+
+![Image 12-30-23 at 6 40 PM](https://github.com/ntalib/Anomaly-Detection-Movie-Recommendations-System/assets/90749418/7d8b5894-25d1-4b48-ac9b-e03376ea01a0)
+
+
+
+
+## Project Schema 2: Selecting the threshold, ε
+
+
+After estimating or Gaussian distribution parameters, we can now investigate which training examples have a very high probability given this distribution and which training example has a low probability. 
+
+
+The low probability training examples are more likely to be the anomalies
+
+
+
+
+
+
+
+
 
 
 
