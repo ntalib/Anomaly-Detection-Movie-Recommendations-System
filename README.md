@@ -5,18 +5,19 @@
 
 This is a Anamoly Detection and Recommender system using MATLAB. 
 
-The anamoly detection project uses the Multivariate Gaussian Distribution to fit the training data. There are 307 collected data, m=307, when the detection algorithm detected anomalous behavior in the computer servers, thus the unlabeled dataset { x^1, ..., x^m}. The features measure the throughput (mb/s) and latency (ms) of response of each server and we suspect that the vast majority of these examples are "normal" or non-anomalous examples of the servers operating normally but there is a possibility that some of the examples of servers is acting anomalously within the collected data. 
+The anamoly detection project uses the Multivariate Gaussian Distribution to fit the training data. We 307 collected data, m=307, when the detection algorithm detected anomalous behavior in the computer servers, thus the unlabeled dataset { x^1, ..., x^m}. The features measure the throughput (mb/s) and latency (ms) of response of each server and we suspect that the vast majority of these examples are "normal" or non-anomalous examples of the servers operating normally but there is a possibility that some of the examples from the servers is acting anomalously from the collected data. 
 
 
 
 
 ## **The Dataset**
 
+The graph below is the first dataset:
+
 ![Image 12-30-23 at 4 40 PM](https://github.com/ntalib/Anomaly-Detection-Movie-Recommendations-System/assets/90749418/8c163b82-44a5-470c-a8a0-70f26129f2b2)
 
 
 
-This project uses songs generated from [Million Song Dataset](http://millionsongdataset.com)
 
 
 ## **Log Dataset**
