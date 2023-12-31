@@ -24,7 +24,7 @@ The graph below is the first dataset:
 
 To perform this anomaly detection, we need to fit the model to the data's distribution. 
 
-Given that our training set {x^1,...,x^m}, where x^i ∈ R^n, we want to estimate the Gaussian distribution for each of the features x^i. For each i=1...n, we need to find parameters μ<sub>i</sub> and σ<sub>i</sub><sup>^2</sup>  that fit the data in the i<sup>th<sup> dimension 
+Given that our training set {x^1,...,x^m}, where x^i ∈ R^n, we want to estimate the Gaussian distribution for each of the features x^i. For each i=1...n, we need to find parameters μ<sub>i</sub> and σ<sub>i</sub><sup>2</sup>  that fit the data in the i<sup>th<sup> dimension 
 
 
 ## Project Schema
