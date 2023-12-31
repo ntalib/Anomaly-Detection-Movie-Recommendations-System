@@ -24,12 +24,37 @@ The graph below is the first dataset:
 
 To perform this anomaly detection, we need to fit the model to the data's distribution. 
 
-Given that our training set {x^1,...,x^m}, where x^i ∈ R^n, we want to estimate the Gaussian distribution for each of the features x^i. For each i=1...n, we need to find parameters μ<sub>i</sub> and σ<sub>i</sub><sup>2</sup>  that fit the data in the i<sup>th<sup> 
+Given that our training set {x^1,...,x^m}, where x^i ∈ R^n, we want to estimate the Gaussian distribution for each of the features x^i. For each i=1...n, we need to find parameters μ<sub>i</sub> and σ<sub>i</sub><sup>2</sup>  that fit the data in the i<sup>th<sup> dimension {*x*<sub>i</sub> ^1 ,....,*x*<sub>i</sub>^m} 
 
-dimension
+The Gaussian distribution is given by:
 
 
-## Project Schema
+
+![Image 12-30-23 at 6 12 PM](https://github.com/ntalib/Anomaly-Detection-Movie-Recommendations-System/assets/90749418/49af44e8-e824-4c96-bb31-404f081dae53)
+
+
+Where miu is the mean and the sigma squared controlss the variance.
+
+
+
+## Project Schema: Estimating the parameters for a Gaussian distribution
+
+
+To estimate the parameters (miu, sigma squared) of the ith feature by using the following equations. 
+
+
+To estimate the mean, miu, we will use:
+
+![Image 12-30-23 at 6 17 PM](https://github.com/ntalib/Anomaly-Detection-Movie-Recommendations-System/assets/90749418/c4cb466c-22d0-4f2f-8575-3a8b19f6ac87)
+
+
+and for the variance, sigma, we will use:
+
+![Image 12-30-23 at 6 18 PM](https://github.com/ntalib/Anomaly-Detection-Movie-Recommendations-System/assets/90749418/ef659cc9-19c9-4bea-aa0e-25ac9aeeb966)
+
+
+
+
 
 #### Fact Table 
 **songplays** : records song playes in the log data, records with  `NextSong`
