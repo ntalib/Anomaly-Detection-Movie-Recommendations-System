@@ -19,6 +19,8 @@ The graph below is the first dataset:
 ![Image 12-30-23 at 4 40 PM](https://github.com/ntalib/Anomaly-Detection-Movie-Recommendations-System/assets/90749418/8c163b82-44a5-470c-a8a0-70f26129f2b2)
 
 
+
+
 ## **Gaussian Distribution**
 
 
@@ -53,6 +55,7 @@ and for the variance, sigma, we will use:
 ![Image 12-30-23 at 6 18 PM](https://github.com/ntalib/Anomaly-Detection-Movie-Recommendations-System/assets/90749418/ef659cc9-19c9-4bea-aa0e-25ac9aeeb966)
 
 
+The file *estimateGaussian.m* is a function that takes data matrix X as input and output an n-dimension vector *mu* that hols the mean of all the *n* features and another n-dimension vector
 
 
 
