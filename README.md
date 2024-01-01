@@ -76,73 +76,8 @@ The low probability training examples are more likely to be the anomalies in our
 
 In this part of the project we will implement as algorithm to select the threshold ε using F<sub>1</sub> score on the cross validation set. For this we use a cross validation trainging set 
 
-{(*x*<sub>cv</sub><sup>(1)</sup>,*y*<sub>cv</sub><sup>(1)</sup>),...,(*x*<sub>cv</sub><sup>(m)</sup>,*y*<sub>cv</sub><sup>(m)</sup>), where the label y=1 corresponds to an anomalous training example and y=0  corresponds to a normal training example. For each cross validation training example, we will compute p(x<sub>cv</sub><sup>(i)</sup>). The vector of all these probabilities
+{(*x*<sub>cv</sub><sup>(1)</sup>,*y*<sub>cv</sub><sup>(1)</sup>),...,(*x*<sub>cv</sub><sup>(m)</sup>,*y*<sub>cv</sub><sup>(m)</sup>), where the label y=1 corresponds to an anomalous training example and y=0  corresponds to a normal training example. For each cross validation training example, we will compute *p*(x<sub>cv</sub><sup>(i)</sup>). The vector of all these probabilities *p*(x<sub>cv</sub><sup>(1)</sup>),...,*p*(x<sub>cv</sub><sup>(m)</sup>) is passed to the file function **selectThreshold.m** in the vector *pval*, and *y*<sub>cv</sub><sup>(m)</sup>) is passed through it as well.
 
-
-
-
-
-
-
-
-
-
-
-#### Fact Table 
-**songplays** : records song playes in the log data, records with  `NextSong`
-```
-songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
-```
-#### Dimension Tables
-**users**  : users in the app
-```
-user_id, first_name, last_name, gender, level
-```
-**songs**  : songs in music database
-```
-song_id, title, artist_id, year, duration
-```
-**artists**  : artists in music database
-```
-artist_id, name, location, latitude, longitude
-```
-**time**  : timestamps of records in  **songplays**  broken down into specific units
-```
-start_time, hour, day, week, month, year, weekday
-```
-
-## Project Documents
-
-```sql_queries.py``` : contains sql queries for dropping and  creating fact and dimension tables. Also, contains insertion query template.
-
-```create_tables.py``` : contains code for setting up database. Running this file creates **sparkifydb** and also creates the fact and dimension tables.
-
-```etl.ipynb``` : a jupyter notebook to analyse dataset before loading. 
-
-```etl.py``` : read and process **song_data** and **log_data**
-
-```test.ipynb``` : a notebook to connect to postgres db and validate the data loaded.
-
-## Environments used 
-Python 3.6 or above
-
-PostgresSQL 9.5 or above
-
-psycopg2 - PostgreSQL database adapter for Python
-
-
-## Run
-
-Run the drive program ```main.py``` as below.
-```
-python main.py
-``` 
-
-The ```create_tables.py``` and ```etl.py``` file can also be run independently as below:
-```
-python create_tables.py 
-python etl.py 
-```
-
+**selectThreshold.m** will return the selected threshold, ε and the F<sub>1</sub> score, where if *x*
 
 
