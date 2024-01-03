@@ -78,6 +78,6 @@ In this part of the project we will implement as algorithm to select the thresho
 
 {(*x*<sub>cv</sub><sup>(1)</sup>,*y*<sub>cv</sub><sup>(1)</sup>),...,(*x*<sub>cv</sub><sup>(m)</sup>,*y*<sub>cv</sub><sup>(m)</sup>), where the label y=1 corresponds to an anomalous training example and y=0  corresponds to a normal training example. For each cross validation training example, we will compute *p*(x<sub>cv</sub><sup>(i)</sup>). The vector of all these probabilities *p*(x<sub>cv</sub><sup>(1)</sup>),...,*p*(x<sub>cv</sub><sup>(m)</sup>) is passed to the file function **selectThreshold.m** in the vector *pval*, and *y*<sub>cv</sub><sup>(m)</sup>) is passed through it as well.
 
-**selectThreshold.m** will return the selected threshold, ε and the F<sub>1</sub> score, where if *x*
+**selectThreshold.m** will then return (1) the selected threshold, ε and (2) the F<sub>1</sub> score. If an example *x* has a low probability *p(x)<ε*
 
 
