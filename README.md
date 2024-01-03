@@ -78,6 +78,46 @@ In this part of the project we will implement as algorithm to select the thresho
 
 {(*x*<sub>cv</sub><sup>(1)</sup>,*y*<sub>cv</sub><sup>(1)</sup>),...,(*x*<sub>cv</sub><sup>(m)</sup>,*y*<sub>cv</sub><sup>(m)</sup>), where the label y=1 corresponds to an anomalous training example and y=0  corresponds to a normal training example. For each cross validation training example, we will compute *p*(x<sub>cv</sub><sup>(i)</sup>). The vector of all these probabilities *p*(x<sub>cv</sub><sup>(1)</sup>),...,*p*(x<sub>cv</sub><sup>(m)</sup>) is passed to the file function **selectThreshold.m** in the vector *pval*, and *y*<sub>cv</sub><sup>(m)</sup>) is passed through it as well.
 
-**selectThreshold.m** will then return (1) the selected threshold, ε and (2) the F<sub>1</sub> score. If an example *x* has a low probability *p(x)<ε*
+**selectThreshold.m** will then return (1) the selected threshold, ε and (2) the F<sub>1</sub> score. When it returns (1) the selected threshold, ε , and an example *x* has a low probability of *p(x)<ε* , then it is considered to be an anamoly. And when it return (2) the F<sub>1</sub> score, that should tells you how good we're doing on finding the ground truth anomalies given a certain threshold. 
+
+
+For the various value of ε, we will also compute the F<sub>1</sub> score by computing how many examples the current threshold classifies correctly. 
+
+F<sub>1</sub> is compute by using *prec* and *rec*:
+
+![Image 1-3-24 at 12 16 PM](https://github.com/ntalib/Anomaly-Detection-Movie-Recommendations-System/assets/90749418/356de2e0-67d8-450a-a677-7654bd738b91)
+
+
+Then we compute precision and recall by:
+
+
+  prec = a / (a + b);
+  rec = a / (a + c);
+
+
+  where,
+
+*a* is the number of true positives: the ground truth lavel says it's an anomaly and our algorithm correctly classified it as an anomaly 
+
+*b* is the number of false positives: the ground truth label says it's not an anomaly, but our algorithm incorrectly classified it as an anomaly.
+
+*c* is the number of false negatives: the ground truth lable says it's an anomaly, but our algorithm incorrectly classified it as not being anomalous. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
