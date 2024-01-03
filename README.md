@@ -88,7 +88,7 @@ F<sub>1</sub> is compute by using *prec* and *rec*:
 ![Image 1-3-24 at 12 16 PM](https://github.com/ntalib/Anomaly-Detection-Movie-Recommendations-System/assets/90749418/356de2e0-67d8-450a-a677-7654bd738b91)
 
 
-Then we compute precision and recall by:
+Then we compute precision and recall by computing:
 
 
   prec = a / (a + b);
@@ -105,6 +105,10 @@ Then we compute precision and recall by:
 *c* is the number of false negatives: the ground truth lable says it's an anomaly, but our algorithm incorrectly classified it as not being anomalous. 
 
 
+**selectThreshold.m** has a loop that will try different values of ε, and will select the best ε based on the F<sub>1</sub> score. To compute a, b and c, we are using a vectors. We can implement this by using MATLAB equality test between a vector and a single number. If there is a several binary values in a n-dimensional binary vector ![Image 1-3-24 at 2 47 PM](https://github.com/ntalib/Anomaly-Detection-System/assets/90749418/c50daa43-2f9b-4f01-a3e7-731594b8fd59)
+
+
+![Image 1-3-24 at 2 26 PM](https://github.com/ntalib/Anomaly-Detection-System/assets/90749418/2674b105-1d94-4e93-b682-d33394d45c47)
 
 
 
