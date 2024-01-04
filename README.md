@@ -16,8 +16,7 @@ The graph below is the first dataset:
 
 
 
-![Image 12-30-23 at 4 40 PM](https://github.com/ntalib/Anomaly-Detection-Movie-Recommendations-System/assets/90749418/8c163b82-44a5-470c-a8a0-70f26129f2b2)
-
+![Image 1-3-24 at 7 29 PM](https://github.com/ntalib/Anomaly-Detection-System/assets/90749418/5944de0a-6f73-4fcb-baba-c9ac087b5bc6)
 
 
 
