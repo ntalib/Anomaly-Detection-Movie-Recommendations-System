@@ -116,7 +116,12 @@ we can find out how many values in this vector are 0 by using: *sum(v == 0)*. We
 We should see the value for epsilon approximately at 8.99e-05 when we run 
 
 
+![Image 1-3-24 at 3 04 PM](https://github.com/ntalib/Anomaly-Detection-System/assets/90749418/47d84763-7d7e-432d-8dac-f74f7ac001ea)
 
+
+## Project Schema 3: Dimensional dataset
+
+The last part of the anomaly detection algorithm Anomaly.m
 
 
 
