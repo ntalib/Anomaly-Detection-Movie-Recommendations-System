@@ -1,11 +1,4 @@
 %% Anomaly Detection System
-%
-%
-%
-%
-%
-%
-
 %% Initialization
 clear ; close all; clc
 
@@ -22,6 +15,7 @@ fprintf('Visualizing example dataset for outlier detection.\n\n');
 
 %  The following command loads the dataset. We should now have the
 %  variables X, Xval, yval in the environment
+
 load('ex8data1.mat');
 
 %  Visualize the example dataset
@@ -44,7 +38,7 @@ pause
 %
 fprintf('Visualizing Gaussian fit.\n\n');
 
-%  Estimate my and sigma2
+%  Estimate mu and sigma2
 [mu sigma2] = estimateGaussian(X);
 
 %  Returns the density of the multivariate normal at each data point (row) 
@@ -108,3 +102,9 @@ fprintf('Best F1 on Cross Validation Set:  %f\n', F1);
 fprintf('   (you should see a value epsilon of about 1.38e-18)\n');
 fprintf('   (you should see a Best F1 value of 0.615385)\n');
 fprintf('# Outliers found: %d\n\n', sum(p < epsilon));
+
+
+
+
+
+
