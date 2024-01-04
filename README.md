@@ -58,7 +58,7 @@ The file *estimateGaussian.m* is a function that takes data matrix X as input an
 
 We will also be visulaizing the contours of the fitted Gaussian distribution and we should have a plot similar to below: 
 
-![Image 12-30-23 at 6 40 PM](https://github.com/ntalib/Anomaly-Detection-Movie-Recommendations-System/assets/90749418/7d8b5894-25d1-4b48-ac9b-e03376ea01a0)
+![Image 1-3-24 at 7 30 PM](https://github.com/ntalib/Anomaly-Detection-System/assets/90749418/6707f1cd-e382-4f31-9f87-c3921159b777)
 
 
 From the plot visuals, we can see that most of non-anomalous examples are in the region with the highest probility, while the anomalous training examples are in the region with lower probabilities. 
