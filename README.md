@@ -121,7 +121,7 @@ We should see the value for epsilon approximately at 8.99e-05 when we run
 
 ## Project Schema 3: Dimensional dataset
 
-The last part of the anomaly detection algorithm Anomaly.m
+The last part of the script of Anomaly.m is it will run the anomaly detection algotithm using a more dimensional dataset. This dataset has 11 features that captures more properties of the computer servers. The script will also use the code to estimate Gaussian parameters (μi and σi2) and evaluate the probabilities for both the training data X from were we estimated the Gaussian parameters and also fo the cross validation set Xval. Finally, it will use the *selectThreshold* to find the best threshold ε. We would see the value epsilon of about 1.38e-18 and 117 anomalies detected. 
 
 
 
